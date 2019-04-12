@@ -1,11 +1,8 @@
 #include<stdio.h>
-//Caeser cipher
-
-
 
 int main ()
 {
-char message[80] = {"message"};
+char message[80] = {"kebab tasty"};
 // let is the letter that will be printed after encryption
 int key = 1, i; 
 //values above are the key of encryption, and i is an int to use in for loops
@@ -20,8 +17,7 @@ for(i=0 ; message[i] != '\0' ; i++)
     
     if (message[i] > 65 && message[i] <91)
 {
-   
-    message[i] = message[i] + key;
+     
  message[i] = message[i] + (key % 26);
 } 
 
@@ -29,8 +25,8 @@ for(i=0 ; message[i] != '\0' ; i++)
 //printf("enter the key:")
 
 //scanf("%d," &key);
-    scanf("%d", message[i]);
-   printf("%d", message[i]);
+ scanf("%s", message);
+ printf("%s\n", message);
     
 }
 
