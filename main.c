@@ -1,48 +1,42 @@
+#include<stdio.h>
 //Caeser cipher
-char_message(m)
+
 
 
 int main ()
 {
-char let
+char message[80] = {"message"};
 // let is the letter that will be printed after encryption
-int key, i; 
+int key = 1, i; 
 //values above are the key of encryption, and i is an int to use in for loops
 
 printf("enter a messsage:");
 
-for(x=0 ; message[80] != '\0' ; i++)
+for(i=0 ; message[i] != '\0' ; i++)
+{ 
+    if (message[i] >96 && message[i] <123)
+{ message[i]= message[i] - 32;
+}
+    
+    if (message[i] > 65 && message[i] <91)
 {
-    scanf("%c", &m);
-    
-    
-    
-    
-}
-message[i] = m;
-
-
-
-char message[80];
-
-printf("enter the key:")
-
-scanf("%d," &key);
-
-for (int i=0; message[0] != '\0';i++)
-
-char_message(m)
-{
-    char c = 'B';
-int temp;
-temp = c;
-int ascii[80];
-    
-    
-    
-let = (m + key)(%26);
-
-printf("%c," let);
+   
+    message[i] = message[i] + key;
+ message[i] = message[i] + (key % 26);
+} 
 
 }
+//printf("enter the key:")
+
+//scanf("%d," &key);
+    scanf("%d", message[i]);
+   printf("%d", message[i]);
+    
 }
+
+
+
+//Big for statement 
+
+
+//If lower then 65 (ASCII number) or not higher then number of Z
