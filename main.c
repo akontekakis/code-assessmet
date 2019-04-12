@@ -2,7 +2,7 @@
 
 int main ()
 {
-char message[80] = {"kebab tasty"};
+char message[80] = {"message"};
 // let is the letter that will be printed after encryption
 int key = 1, i; 
 //values above are the key of encryption, and i is an int to use in for loops
