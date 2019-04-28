@@ -1,38 +1,70 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main ()
 {
-char message[80] = {"message"};
-// let is the letter that will be printed after encryption
-int key = 1, i; 
-//values above are the key of encryption, and i is an int to use in for loops
+int encryption_type = 2;    //this integer is used in the switch statement to select whether 
+//rotation or substitution encrytion or decryption is used.
+// 1 for rotational encryption, 2 for rotational decryption 
+// 3 for substitution encryption, 4 for substitution decryption
+switch(encryption_type)
 
-printf("enter a messsage:");
-
-for(i=0 ; message[i] != '\0' ; i++)
+case 1:      
+{       //rotational encryption
+    {
+        char message[80]= {"please work"};      // initialise the string with a message to be encrypted
+        int key = 2;        //the value that determines the value of rotation
+        int i;              // is an int to use in for loops
+ 
+        for(i=0 ; message[i] != '\0' ; i++)
 { 
-    if (message[i] >96 && message[i] <123)
-{ message[i]= message[i] - 32;
-}
+            if (message[i] >96 && message[i] <123)
+{
+                    message[i]= message[i] - 32;
+}   
     
-    if (message[i] > 65 && message[i] <91)
+            if (message[i] > 65 && message[i] <91)
 {
      
- message[i] = message[i] + (key % 26);
+                    message[i] = message[i] + (key % 26);
 } 
 
 }
-//printf("enter the key:")
+    scanf("%s", message);
+    printf("%s", message);
 
-//scanf("%d," &key);
- scanf("%s", message);
- printf("%s\n", message);
-    
+    break;   
 }
 
+case 2:         // rotational decryption
+  {
+        char message[80]= {"RNGauG YqtM"};      // initialise the string with a message to be deencrypted
+        int key = 2;        //the value that determines the value of rotation
+        int i;              // is an int to use in the  for loops
+ 
+        for(i=0 ; message[i] != '\0' ; i++)
+{ 
+            if (message[i] >96 && message[i] <123)
+{
+                    message[i]= message[i] - 32;
+}   
+    
+            if (message[i] > 65 && message[i] <91)
+{
+     
+                    message[i] = message[i] - (key % 26);
+} 
 
+}
+    scanf("%s", message);
+    printf("%s", message);
 
-//Big for statement 
+    break;
+    }
+    
+ 
+default: 
+printf("error in chosing an ecryption / decryption type");
 
-
-//If lower then 65 (ASCII number) or not higher then number of Z
+}
+ 
+}
