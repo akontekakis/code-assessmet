@@ -2,7 +2,7 @@
 
 int main ()
 {
-int encryption_type = 4;    //this integer is used in the switch statement to select whether 
+int encryption_type = 3;    //this integer is used in the switch statement to select whether 
 //rotation or substitution encrytion or decryption is used.
 // 1 for rotational encryption, 2 for rotational decryption 
 // 3 for substitution encryption, 4 for substitution decryption
