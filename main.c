@@ -16,7 +16,7 @@ case 1:
         int key = 2;        //the value that determines the value of rotation
         int i;              // is an int to use in for loops
  
-        for(i=0 ; message[i] != '\0' ; i++)
+        for(i=0 ; message[i] != '\0' ; i++)  //the for loop makes the code in the loop apply to each letter in the array, this encrypts each letter and then saves it a
 { 
             if (message[i] >96 && message[i] <123)  // if the ASCII characters are between these values they represent lower case letters, this means the below code will run 
 {
@@ -25,7 +25,6 @@ case 1:
     
             if (message[i] > 64 && message[i] <91) // if all characters are captial letters (the ASCII characters that represent capital letters) the below code will run
 {
-     
                     message[i] = message[i] + (key % 26); // this is the formula that by using the key rotates the alphabet and creates the actual encryption
 } 
 
@@ -36,9 +35,10 @@ case 1:
     break;   // this stops the code meaning it doesnt continue through all the other parts of the swtitch statements
 }
 
+
 case 2:         // rotational decryption
   {
-        char message[80]= {"RNGauG YqtM"};      // initialise the string with a message to be deencrypted
+        char message[80]= {"RNGCUG YQTM"};      // initialise the string with a message to be deencrypted
         int key = 2;        //the value that determines the value of rotation
         int i;              // is an int to use in the  for loops
  
@@ -49,7 +49,7 @@ case 2:         // rotational decryption
                     message[i]= message[i] - 32;        // this minues the difference which is 32 from the ASCII values which converts lower case letters into uppercase letters
 }   
     
-            if (message[i] > 64 && message[i] <91)      // if all characters are captial letters (the ASCII characters that represent capital letters) the below code will run
+            if (message[i] > 64 && message[i] <91)      // if all characters are capital letters (the ASCII characters that represent capital letters) the below code will run
 {
      
                     message[i] = message[i] - (key % 26);   //this is the formula that by using the key rotates the alphabet and creates the actual encryption
